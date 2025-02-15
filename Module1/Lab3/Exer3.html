@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Module 1 Exercise 3</title>
+
+    <style>
+        body {
+            font-family: sans-serif;
+            margin:
+                0;
+        }
+
+        .container {
+            display: flex;
+            min-height:
+                100vh;
+            align-items: stretch;
+        }
+
+        .column {
+            background: goldenrod; 
+            display:
+                flex;
+            flex-direction: column;
+            justify-content:
+                center;
+            align-items: center;
+            flex:
+                1;
+        }
+
+        
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="column" id="column1">
+            <h1 id="heading1">TikTok</h1>
+            <button onclick="change()">Change Me</button>
+            <img src="https://iconape.com/wp-content/files/fd/121669/svg/tiktok-logo-tik-tok-logo-icon-png-svg.png" 
+                width="300" height="300"
+                alt="tiktok">
+        </div>
+        <div class="column" id="column2">
+
+            <h1 id="heading2">Instagram</h1>
+            <button onclick="change1()">Change Me</button>
+            <img src="https://static.vecteezy.com/system/resources/previews/018/930/413/original/instagram-logo-instagram-icon-transparent-free-png.png" 
+                width="300" height="300"
+                alt="instagram">
+
+        </div>
+    </div>
+
+    <script>
+    function change(){
+            document.getElementById("column1").style.backgroundColor = "lightblue";
+            document.getElementById("heading1").innerHTML = "";
+            alert('Welcome to TikTok!')
+            }
+    function change1(){
+            document.getElementById("column2").style.backgroundColor = "lightblue";
+            document.getElementById("heading2").innerHTML = "";
+            alert('Welcome to Instagram!')
+            }
+    </script>
+
+</body>
+
+</html>
