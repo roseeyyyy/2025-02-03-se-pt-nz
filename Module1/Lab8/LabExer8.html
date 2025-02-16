@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dice Game</title>
+
+    <style>
+        h2 {
+            margin: 30px;
+            font-family: "Lobster", cursive;
+            font-size: 4.5rem;
+            color: lightslategray;
+            text-align: center;
+        }
+
+        body {
+            font-family: sans-serif;
+            margin:
+                0;
+        }
+
+        .container {
+            display: flex;
+            min-height:
+                100vh;
+            align-items: stretch;
+        }
+
+        .column {
+            background: lightskyblue; 
+            display:
+                flex;
+            flex-direction: column;
+            justify-content:
+                center;
+            align-items: center;
+            flex:
+                1;
+        }
+
+     
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2 id="header">Dice Generator</h2>
+    </header>
+    <div class="container">
+
+        <div class="column" id="column1">
+            <h1 id="dice1"></h1>
+            <img src="https://th.bing.com/th/id/R.cc79e2d10b0ec06e964cc26217bc7e5d?rik=i8jaa%2b71snzVOA&riu=http%3a%2f%2fwww.clker.com%2fcliparts%2fY%2fg%2f8%2fe%2fo%2f9%2fdice-6-hi.png&ehk=yUshHiZL1K%2b5qxNjgOGHq%2fEkg0B7KES78XvYBxTpXDQ%3d&risl=&pid=ImgRaw&r=0" 
+                width="100" height="100"
+                alt="dice6">
+            <h3 id="heading1">Dice of 6</h3>
+            <button onclick="getResult('dice6')">Roll Now</button>
+            
+        </div>
+        <div class="column" id="column2">
+            <h1 id="dice2"></h1>
+            <img src="https://www.media4math.com/sites/default/files/library_asset/images/MathClipArt--Two-Dice-with-10-Showing-A.png" 
+                width="200" height="100"
+                alt="dice10">
+            <h3 id="heading2">Dice of 10</h3>
+            <button onclick="getResult('dice10')">Roll Now</button>
+            
+        </div>
+    </div>
+    <script src="/Module1/Lab8/LabExer8.js"></script>
+</body>
+
+</html>
