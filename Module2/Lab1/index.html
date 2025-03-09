@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>  
+  <title>HTML</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Familiarizing with HTML tags">
+  <meta name="keywords" content="HTML, CSS, JavaScript">
+  <meta name="author" content="Rose Brillo">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    table, th, td {
+      border:1px solid black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="form.html">Form</a>
+    </nav>
+  </header>
+
+  <h1>Learning in HTML tags</h1>
+
+  <article>
+    <h2>Learning Elements - div, span, p, pre, ul, li, ol, article</h2>
+  </article>
+
+  <div>HTML
+    <span></span>
+  </div>
+  
+  <div>CSS
+    <span></span>
+  </div>
+  
+  <div>JavaScript
+    <span></span>
+  </div>
+
+  <p>
+    p represents paragraph     without preserving      spacing
+  </p>
+  <pre>
+    Text in         a pre element
+    is displayed in a fixed-width
+    font, and it preserves
+    both      spaces and
+    line breaks
+  </pre>
+
+  <ul>Test
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+      <li>4</li>
+  </ul>
+
+  <ol>Test 2
+      <li>1</li>
+      <li>2</li>
+      <li>3</li>
+  </ol>
+
+  <table>
+    <tr>
+      <td>Nested Table
+        <table>
+          <tr>
+            <td>Cell 1</td>
+          </tr>
+          <tr>
+            <td>Cell 2</td>
+            <td>Cell 3</td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+ 
+  <article>
+    <h2>HTML elements - Tables - table, thead, tbody, tr, td, th</h2>
+  </article>
+
+  <table style="width:100%">
+    <thead>
+    <tr>
+      <th colspan="2">Company</th>
+      <th>Country</th>
+    </tr>
+    </thead>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td>Maria Anders</td>
+    </tr>
+    <tr>
+      <td>Alfreds Futterkiste</td>
+      <td rowspan="2">Maria Anders</td>
+    </tr>
+    <tr>
+      <td>Centro comercial Moctezuma</td>
+      <td>Francisco Chang</td>
+    </tr>
+  </table>
+
+  <article>
+    <h2>HTML elements - img, video, audio</h2>
+  </article>
+
+  <img src="https://picsum.photos/400/400" alt="photos"
+    width = "200" height = "200"> 
+
+  <img src = "assets/html_lab_image.jpg" alt = "clouds"
+    width = "200" height = "200"> 
+    
+  <div>
+    <video controls width="250">
+      <source src = "assets/flower.webm" type="video/webm">
+      Sorry, your browser doesn't support embedded videos.
+    </video>
+  </div>
+  
+  <figure>
+    <audio controls autoplay src="assets/t-rex-roar.mp3">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+    <figcaption>
+      Fig. 1 T-Rex Roar
+    </figcaption>
+  </figure>
+
+
+  <main>  
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>

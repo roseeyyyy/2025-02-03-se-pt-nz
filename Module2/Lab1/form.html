@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <!-- works like <a href="/index.html">Home</a> -->
+      <a href="index.html">Home</a>
+      
+    </nav>
+  </header>
+
+  <form method="POST" action="http://127.0.0.1:5500/form.html">
+    <div>
+      <label for="fname">First Name:</label>
+      <input type="text" id="fname" name="fname"><br><br>
+    </div>
+
+    <div>
+      <label for="lname">Last Name:</label>
+      <input type="text" id="lname" name="lname"><br><br> 
+    </div>
+  </form>
+
+  <div>
+    <input type="radio" id="html" name="rhtml" value="HTML">
+    <label for="html">HTML</label><br>
+    <input type="radio" id="css" name="rcss" value="CSS">
+    <label for="css">CSS</label><br>
+    <input type="radio" id="javascript" name="rjava" value="JavaScript">
+    <label for="javascript">JavaScript</label>
+  </div>
+
+  <div>
+    <input type = "checkbox" id="vehicle1" id="vehicle1" value="Car">
+    <label for="vehicle1">Car</label>
+    <input type = "checkbox" id="vehicle2" id="vehicle2" value="Bike">
+    <label for="vehicle2">Suzuki</label>
+    <input type = "checkbox" id="vehicle3" id="vehicle3" value="GolfCart">
+    <label for="vehicle3">Golf Cart</label>
+  </div>
+
+  <select name="carBrand">
+    <option value="">Choose a brand</option>
+    <option value="Tesla"><label for="brand1">Tesla</label></option>
+    <option value="BMW"><label for="brand2">BMW</label></option>
+  </select>
+
+  <button type="submit">Submit form</button>
+
+  <main>
+  </main>
+
+  <footer>Copyright &copy; 2024</footer>
+</body>
+
+</html>
