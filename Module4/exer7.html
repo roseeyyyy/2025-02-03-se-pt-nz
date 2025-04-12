@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f2f2f2;
+    }
+
+    .slider {
+      width: 100px; 
+      height: 100px;
+      animation: slide 4s infinite;
+    }
+
+    @keyframes slide {
+      0% {
+        transform: translateY(0);
+        background-color: blue;
+      }
+      50% {
+        transform: translateY(300px); 
+        background-color: red;
+      }
+      100% {
+        transform: translateY(0);
+        background-color: blue; 
+      }
+    }
+  </style>
+</head>
+<body>
+
+
+  <div class="slider"></div>
+
+</body>
+</html>

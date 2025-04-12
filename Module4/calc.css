@@ -1,0 +1,28 @@
+#calc-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #8e8e8e;
+
+    width: 30%;
+
+}
+
+.calc-button {
+    width: 5vw
+}
+
+#calc-input {
+    height: 3vh;
+    width: 28vh;
+}
+
+#calc-input-cont {
+    padding: 1vh;
+}
+
+#clear-button {
+    width: 10.5vw;
+    
+}
