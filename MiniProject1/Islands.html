@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top Philippine Islands</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    .card-img-top {
+    height: 250px;
+    object-fit: cover;
+  }
+
+  </style>
+
+</head>
+<body>
+
+  <div class="container my-5">
+    <h1 class="mb-4 text-center">Top Islands in the Philippines</h1>
+
+    <div class="row mb-4">
+      <div class="col-md-4">
+        <input type="text" id="searchInput" class="form-control" placeholder="Search islands...">
+      </div>
+      <div class="col-md-4">
+        <select id="categorySelect" class="form-select">
+          <option value="all">All Categories</option>
+          <option value="beach">Beach</option>
+          <option value="diving">Diving</option>
+          <option value="surfing">Surfing</option>
+          <option value="nature">Nature</option>
+          <option value="historical">Historical</option>
+        </select>
+      </div>
+      
+      <div class="col-md-4">
+        <select id="sortSelect" class="form-select">
+          <option value="title">Sort by Title</option>
+          <option value="price">Sort by Price</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Card Grid -->
+    <div class="row" id="islandContainer"></div>
+  </div>
+
+  <script>
+    const islands = [
+      {
+        id: 1,
+        title: "Batanes",
+        description: "Rolling hills, stone houses, scenic landscapes",
+        category: "nature",
+        price: 100 + " per night",
+        image: "batanes.jpg",
+        topSpots: ["Basco Lighthouse", "Marlboro Country", "Sabtang Island"],
+        bestTime: "March to June"
+      },
+      {
+        id: 2,
+        title: "Boracay",
+        description: "White Beach, nightlife, powdery white sand",
+        category: "beach",
+        price: 200 + " per night",
+        image: "boracay.jpg",
+        topSpots: ["White Beach", "Puka Beach", "Bulabog Beach"],
+        bestTime: "November to May"
+      },
+      {
+        id: 3,
+        title: "Siargao",
+        description: "Surfing capital of the Philippines, island hopping, lagoons",
+        category: "surfing",
+        price: 180 + " per night",
+        image: "siargao.jpg",
+        topSpots: ["Cloud 9", "Sugba Lagoon", "Magpupungko Rock Pools"],
+        bestTime: "August to November"
+      },
+      {
+        id: 4,
+        title: "Coron",
+        description: "World-class wreck diving, lakes, limestone cliffs",
+        category: "diving",
+        price: 73 + " per night",
+        image: "coron.jpg",
+        topSpots: ["Kayangan Lake", "Twin Lagoon", "Barracuda Lake"],
+        bestTime: "March to June"
+      },
+      {
+        id: 5,
+        title: "Bohol",
+        description: "Chocolate Hills, tarsiers, white beaches",
+        category: "historical",
+        price: 220 +" per night",
+        image: "bohol.jpg",
+        topSpots: ["Panglao Island", "Loboc River", "Chocolate Hills"],
+        bestTime: "December to May"
+      },
+      {
+        id: 6,
+        title: "Leyte",
+        description: "Historical landmarks, diving, islets",
+        category: "diving",
+        price: 220 +" per night",
+        image: "leyte.jpg",
+        topSpots: ["Kalanggaman Island", "San Juanico Bridge", "Cuatro Islas"],
+        bestTime: "March to May"
+      }
+    ];
+
+    const container = document.getElementById("islandContainer");
+    const searchInput = document.getElementById("searchInput");
+    const categorySelect = document.getElementById("categorySelect");
+    const sortSelect = document.getElementById("sortSelect");
+
+    function renderIslands(data) {
+      container.innerHTML = "";
+      data.forEach((item) => {
+        const topSpotsQuery = encodeURIComponent(item.topSpots.join(", "));
+        container.innerHTML += `
+          <div class="col-md-4 mb-4">
+            <div class="card h-100">
+              <img src="${item.image}" class="card-img-top" alt="${item.title}">
+              <div class="card-body">
+                <h5 class="card-title">${item.title}</h5>
+                <p class="card-text">${item.description}</p>
+                <div class="d-flex justify-content-between align-items-center mb-2">
+                  <i class="${item.icon} card-icon"></i>
+                  <span class="badge bg-primary">$${item.price}</span>
+                </div>
+                <a href="details.html?id=${item.id}&title=${encodeURIComponent(item.title)}&description=${encodeURIComponent(item.description)}
+                  &image=${encodeURIComponent(item.image)}&spots=${topSpotsQuery}&bestTime=${encodeURIComponent(item.bestTime)}
+                  " class="btn btn-sm btn-outline-info">View More</a>
+              </div>
+            </div>
+          </div>
+        `;
+      });
+    }
+
+    function filterAndSortIslands() {
+      const searchTerm = searchInput.value.toLowerCase();
+      const category = categorySelect.value;
+      const sortBy = sortSelect.value;
+
+      let filtered = islands.filter(i =>
+        (category === "all" || i.category === category) &&
+        i.title.toLowerCase().includes(searchTerm)
+      );
+
+      if (sortBy === "title") {
+        filtered.sort((a, b) => a.title.localeCompare(b.title));
+      } else if (sortBy === "price") {
+        filtered.sort((a, b) => a.price - b.price);
+      }
+
+      renderIslands(filtered);
+    }
+
+    searchInput.addEventListener("input", filterAndSortIslands);
+    categorySelect.addEventListener("change", filterAndSortIslands);
+    sortSelect.addEventListener("change", filterAndSortIslands);
+
+    renderIslands(islands);
+  </script>
+</body>
+</html>
