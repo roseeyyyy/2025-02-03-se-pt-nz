@@ -1,0 +1,21 @@
+{
+  "dependencies": {
+    "axios": "^1.9.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "i": "^0.3.7",
+    "jest": "^29.7.0",
+    "supertest": "^7.1.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "name": "module5",
+  "version": "1.0.0",
+  "main": "exer2.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

@@ -1,0 +1,46 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+      "title": "Fake Store API",
+      "version": "1.0.0",
+      "description": "API for fetching products from the Fake Store API through our Express backend."
+    },
+    "paths": {
+      "/api/products": {
+        "get": {
+          "summary": "Get all products",
+          "responses": {
+            "200": {
+              "description": "A list of products.",
+              "content": {
+                "application/json": {
+                  "schema": {
+                    "type": "array",
+                    "items": {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "components": {
+      "schemas": {
+        "Product": {
+          "type": "object",
+          "properties": {
+            "id": { "type": "integer" },
+            "title": { "type": "string" },
+            "price": { "type": "number" },
+            "description": { "type": "string" },
+            "category": { "type": "string" },
+            "image": { "type": "string" }
+          }
+        }
+      }
+    }
+  }
+  
