@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import PrivateRoute from '../PrivateRoute'
-import Home from '../Home'
-import Login from '../Login'
-import NavBar from '../NavBar'
-import Recipes from '../Recipes'
-import RecipeDetails from '../RecipeDetails'
-import AddRecipe from '../AddRecipe'
-import recipess from '../recipess'
+import PrivateRoute from '../src/routes/PrivateRoute'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import NavBar from './components/NavBar'
+import Recipes from './pages/Recipes'
+import RecipeDetails from './pages/RecipeDetails'
+import AddRecipe from './components/AddRecipe'
+import recipess from './data/recipess'
 import { Box } from '@mui/material'
 
 function App() {

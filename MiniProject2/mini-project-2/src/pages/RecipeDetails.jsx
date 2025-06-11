@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { Container, Typography, Card, CardMedia, CardContent, List, ListItem, ListItemText, Button, Box } from '@mui/material';
-import recipess from './recipess';
+import recipess from '../data/recipess';
 
 function RecipeDetails() {
   const { id } = useParams();

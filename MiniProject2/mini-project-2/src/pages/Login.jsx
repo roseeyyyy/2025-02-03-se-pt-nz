@@ -25,12 +25,10 @@ function Login() {
         setError('Username already exists.');
         return;
       }
-
       const newUser = { username, password };
       existingUsers.push(newUser);
       localStorage.setItem('users', JSON.stringify(existingUsers));
-
-      alert('Account created successfully! You can now log in.');
+      alert('Account created! You can now log in.');
       setIsSignUp(false);
       setUsername('');
       setPassword('');
@@ -41,8 +39,8 @@ function Login() {
       );
 
       if (matchedUser) {
-        localStorage.setItem('currentUser', JSON.stringify(matchedUser));
-        navigate('/home');
+        localStorage.setItem('isAuthenticated', 'true');
+        navigate('/recipes');
       } else {
         setError('Invalid username or password.');
       }

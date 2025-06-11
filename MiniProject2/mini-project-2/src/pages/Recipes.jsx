@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, Grid, Card, CardContent, CardMedia, Typography, Button, CardActions, TextField, Box } from '@mui/material';
 import { Link, useNavigate } from 'react-router-dom';
-import recipess from './recipess';
+import recipess from '../data/recipess';
 
 function Recipes() {
   const [search, setSearch] = useState('');
